@@ -1,11 +1,16 @@
 #!/bin/bash
 
+# Install Python 3.7.1
+sh ./install_python_3.7.sh
+
 # Take XXX Minutes
+git config --global credential.helper 'cache --timeout=60480000'
+git clone https://github.com/Growtrics/handwriting-recognition.git
+cd handwriting-recognition
 
 # Set up git
 git config --global user.email "tech@growtrics.ai"
 git config --global user.name "PraveenInTensorDock"
-
 
 # Install vim
 sudo apt-get install vim -y
@@ -36,7 +41,7 @@ tar -xf google-cloud-cli-linux-x86_64.tar.gz
 source ~/.bashrc
 source ~/.zshrc
 ./google-cloud-sdk/bin/gcloud init
-cd growtrics-data-primary/handwriting_recognition
+cd handwriting-recognition
 
 
 # Get Dataset HAS BEEN COMPILED BELOW
